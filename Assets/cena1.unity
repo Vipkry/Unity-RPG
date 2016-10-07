@@ -547,6 +547,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 056d0d7c600304a40abb0f9c77a9c252, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1395904307 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000014188994558, guid: 056d0d7c600304a40abb0f9c77a9c252,
+    type: 2}
+  m_PrefabInternal: {fileID: 684838995}
 --- !u!1 &1625524267
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,11 +575,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1625524267}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.984137, y: 31.95, z: 65.2}
-  m_LocalScale: {x: 488.45355, y: 466.7853, z: 0}
+  m_LocalPosition: {x: -30.071894, y: 9.465593, z: 17.112396}
+  m_LocalScale: {x: 133.91011, y: 127.96979, z: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 2037597485}
+  m_Father: {fileID: 1395904307}
   m_RootOrder: 0
 --- !u!212 &1625524269
 SpriteRenderer:
@@ -720,9 +725,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 1
-  m_Offset: {x: -0.19140501, y: -0.5875334}
+  m_Offset: {x: -0.26610154, y: -0.58753127}
   serializedVersion: 2
-  m_Size: {x: 8.884876, y: 12.310188}
+  m_Size: {x: 7.8484674, y: 12.310189}
 --- !u!212 &2037597484
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -763,11 +768,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2037597481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: -2.557, z: 3.25}
+  m_LocalPosition: {x: -0.26, y: -2.557, z: 3.25}
   m_LocalScale: {x: 0.055493154, y: 0.05549318, z: 0.05549318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1625524268}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!114 &2037597486
@@ -781,8 +785,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac77aabaf89565844a030e7b0ae2c994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distGroundCheckDisc: 0.17
-  distToGround: 0
+  distGroundCheckDisc: 0.2374
+  distToGround: 0.3415658
   auxiliarDistance: 0.1
   whatIsFloor:
     serializedVersion: 2

@@ -86,11 +86,14 @@ public class Movimento : MonoBehaviour {
 
 	bool isGrounded(){
 		Vector3 aux = transform.position;
+		Vector3 aux2 = transform.position;
 		// Checa se o personagem olha pra direita ou pra esquerda, posiciona no pé do lado oposto
 		// A segunda parte da conta "normaliza" o transform.localscale.x preservando o sinal
 		aux.x += distGroundCheckDisc * (transform.localScale.x/Mathf.Abs(transform.localScale.x)) * -1;
+		aux2.x += distGroundCheckDisc * (transform.localScale.x/Mathf.Abs(transform.localScale.x));
+
 		// Not Grounded
-		if (!Physics2D.Raycast (aux, -Vector2.up, distToGround + auxiliarDistance, whatIsFloor.value)){
+		if (!Physics2D.Raycast (aux, -Vector2.up, distToGround + auxiliarDistance, whatIsFloor.value) && !Physics2D.Raycast (aux2, -Vector2.up, distToGround + auxiliarDistance, whatIsFloor.value)){
 			if (playerRigidbody.velocity.y > 0){
 				playerAnimator.SetInteger ("Jumping", 1);
 			}else {
