@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FloorTrapTrigger.cs" />
      <Compile Include="Assets\Movimento.cs" />
      <Compile Include="Assets\enemyScript.cs" />
      <None Include="Assets\Fit All Screen Size\ReadMe.txt" />
