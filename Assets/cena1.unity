@@ -328,12 +328,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1111658930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.25, y: 1.7700005, z: 0.1454969}
-  m_LocalScale: {x: 0.982363, y: 0.53562266, z: 0.89620537}
+  m_LocalPosition: {x: 0.9953966, y: -2.7097402, z: 3.45}
+  m_LocalScale: {x: 0.2320922, y: 0.1840665, z: 0.3079806}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 1922990094}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!212 &1111658932
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -444,6 +444,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!1 &1280777700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1280777701}
+  m_Layer: 0
+  m_Name: finalPositionGO
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1280777701
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1280777700}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.13, y: 1.7700012, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1922990094}
+  m_RootOrder: 0
 --- !u!1001 &1316796287
 Prefab:
   m_ObjectHideFlags: 0
@@ -677,11 +705,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1922990092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.19, y: -3.318, z: 3.4}
+  m_LocalPosition: {x: -1.19, y: -3.318, z: 3.41}
   m_LocalScale: {x: 0.2362591, y: 0.3436496, z: 0.3436496}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1111658931}
+  - {fileID: 1280777701}
   m_Father: {fileID: 0}
   m_RootOrder: 7
 --- !u!114 &1922990095
@@ -697,7 +725,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
+  initialPosition: {fileID: 1111658931}
+  finalPosition: {fileID: 1280777701}
+  shootPreFab: {fileID: 1000010672385974, guid: 066c40f1e9f95be448ff6b9f10ff76ee,
+    type: 2}
+  forceShoot: 7
 --- !u!1 &2037597481
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +745,7 @@ GameObject:
   - 114: {fileID: 2037597486}
   - 251: {fileID: 2037597487}
   - 95: {fileID: 2037597488}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
