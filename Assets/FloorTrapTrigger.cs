@@ -7,16 +7,17 @@ public class FloorTrapTrigger : MonoBehaviour {
 	public Transform initialPosition;
 	public Transform finalPosition;
 	public GameObject shootPreFab;
+	public int interval;
+	private int actualInterval;
 	private SpriteRenderer spriteRenderer;
 	public float forceShoot;
 	private bool triggered;
-	private int interval;
 	private float deltaHeight;
 	private float extentY;
 	// Use this for initialization
 	void Start () {
 		spriteRenderer = GetComponent<SpriteRenderer> ();
-		interval = 7;
+		actualInterval = interval;
 		extentY = spriteRenderer.bounds.extents.y;
 	}
 	
@@ -30,14 +31,23 @@ public class FloorTrapTrigger : MonoBehaviour {
 				// Summon laser prefab
 				// add velocity
 				// direction = finalPosition - initialPosition
-			if (interval >= 6){
-				interval = 0;
+			if (actualInterval >= interval){
+				
+				actualInterval = 0;
 				Vector2 dir = finalPosition.position - initialPosition.position;
 				GameObject projectile = (GameObject)Instantiate (shootPreFab);
+				Vector3 aux = initialPosition.position;
+				aux.x -= 0.2f;
+				projectile.transform.position = aux;
+
 				Rigidbody2D shootRigidibody = projectile.GetComponent<Rigidbody2D> ();
-				shootRigidibody.velocity = dir * forceShoot;	
+				// Condições para evitar erro de alinhamento (tais como verticais ou horizontais)
+				dir.x = (Mathf.Abs(dir.x) > 0.01f) ? dir.x * forceShoot : 0;
+				dir.y = (Mathf.Abs(dir.y) > 0.01f) ? dir.y * forceShoot : 0;
+				shootRigidibody.velocity = dir;	
+				Debug.Log (dir);
 			}
-			interval++;
+			actualInterval++;
 			// "Triggered animation"
 			if (!triggered){
 				triggered = true;
@@ -51,6 +61,7 @@ public class FloorTrapTrigger : MonoBehaviour {
 				Vector3 aux = transform.position;
 				aux.y += extentY;
 				transform.position = aux;
+				Debug.Log ("TRIGGERED");
 			}
 
 			triggered = false;
