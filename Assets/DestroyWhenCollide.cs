@@ -14,6 +14,11 @@ public class DestroyWhenCollide : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
+		// 10 is the player layer
+		if (coll.gameObject.layer == 10){
+			coll.gameObject.GetComponent<PlayerHealthController>().takeDamage(5);
+		}
+		GameObject.Find ("DamageImage").GetComponent<flashImage> ().Flash ();
 		Destroy (gameObject);
 	}
 

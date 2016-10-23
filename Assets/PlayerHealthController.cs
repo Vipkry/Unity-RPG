@@ -4,15 +4,23 @@ using System.Collections;
 
 public class PlayerHealthController : MonoBehaviour {
 
-	public int initialHealth;
+	public int health;
 	public Text texto;
 	// Use this for initialization
 	void Start () {
-		texto.text = initialHealth.ToString();
+		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void FixedUpdate() {
+		texto.text = health.ToString();
+	}
+
+	public bool takeDamage(int dmg){
+		if (health > 0){
+			health -= dmg;
+			return true;
+		}else {
+			return false;
+		}
 	}
 }

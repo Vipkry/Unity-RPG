@@ -46,10 +46,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\DestroyWhenCollide.cs" />
+     <Compile Include="Assets\Elevator.cs" />
      <Compile Include="Assets\FloorTrapTrigger.cs" />
      <Compile Include="Assets\Movimento.cs" />
      <Compile Include="Assets\PlayerHealthController.cs" />
      <Compile Include="Assets\enemyScript.cs" />
+     <Compile Include="Assets\flashImage.cs" />
      <Compile Include="Assets\respawn.cs" />
      <None Include="Assets\Fit All Screen Size\ReadMe.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

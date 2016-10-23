@@ -45,7 +45,6 @@ public class FloorTrapTrigger : MonoBehaviour {
 				dir.x = (Mathf.Abs(dir.x) > 0.01f) ? dir.x * forceShoot : 0;
 				dir.y = (Mathf.Abs(dir.y) > 0.01f) ? dir.y * forceShoot : 0;
 				shootRigidibody.velocity = dir;	
-				Debug.Log (dir);
 			}
 			actualInterval++;
 			// "Triggered animation"
@@ -60,8 +59,7 @@ public class FloorTrapTrigger : MonoBehaviour {
 			if (triggered){
 				Vector3 aux = transform.position;
 				aux.y += extentY;
-				transform.position = aux;
-				Debug.Log ("TRIGGERED");
+				transform.position = aux;	
 			}
 
 			triggered = false;
