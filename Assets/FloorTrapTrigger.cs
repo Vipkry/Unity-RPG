@@ -24,7 +24,6 @@ public class FloorTrapTrigger : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		// Check if player stepped on the trap
-
 		if (Physics2D.Raycast(new Vector2 (transform.position.x - spriteRenderer.bounds.extents.x, transform.position.y + deltaHeight), Vector2.right, spriteRenderer.bounds.extents.x * 2, whatIsPlayer.value)){
 			
 			// Activate trap
@@ -61,7 +60,7 @@ public class FloorTrapTrigger : MonoBehaviour {
 				aux.y += extentY;
 				transform.position = aux;	
 			}
-
+			actualInterval = interval;
 			triggered = false;
 		}
 

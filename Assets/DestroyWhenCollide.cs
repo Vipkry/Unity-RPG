@@ -17,9 +17,15 @@ public class DestroyWhenCollide : MonoBehaviour {
 		// 10 is the player layer
 		if (coll.gameObject.layer == 10){
 			coll.gameObject.GetComponent<PlayerHealthController>().takeDamage(5);
+			GameObject.Find ("DamageImage").GetComponent<flashImage> ().Flash ();
 		}
-		GameObject.Find ("DamageImage").GetComponent<flashImage> ().Flash ();
+
 		Destroy (gameObject);
 	}
 
+	void OnTriggerEnter2D(Collider2D coll){
+		if (coll.tag == "limiter") {
+			Destroy (gameObject);
+		}
+	}
 }

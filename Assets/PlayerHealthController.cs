@@ -20,6 +20,7 @@ public class PlayerHealthController : MonoBehaviour {
 			health -= dmg;
 			return true;
 		}else {
+			Application.LoadLevel("cena2");
 			return false;
 		}
 	}
