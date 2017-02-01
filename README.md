@@ -11,15 +11,15 @@ Clone this repo to your machine.<br>
 Build PC platform.
 Enjoy o/
 
-### Controls
+## Controls
 
-# Player 1 
+### Player 1 
   - Move forward: D
   - Move backwards: A
   - Jump: W
   - Fire: LeftControl
   
-# Player 2
+### Player 2
   - Move forward: RightArrow
   - Move backwards: LeftArrow
   - Jump: UpArrow
